@@ -18,7 +18,7 @@ body {
   display:flex;
   flex-wrap:wrap;
   font-size: 1.5vh;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 .left {
   min-width:320px;
@@ -39,7 +39,7 @@ body {
   height:80px;
   background-color: rgb(95, 93, 93);
   color:white;
-  font-size: 10vh;
+  font-size: 8vh;
   display:flex;
   justify-content: center;
   align-items: center;
