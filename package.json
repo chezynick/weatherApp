@@ -14,7 +14,7 @@
     "react-scripts": "4.0.0",
     "web-vitals": "^0.2.4"
   },
-  "homepage": "https://chezynick.github.io/weather-app",
+  "homepage": "https://chezynick.github.io/weatherApp",
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
