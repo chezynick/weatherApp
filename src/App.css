@@ -19,7 +19,7 @@ body {
   height:100px;
   background-color: rgb(95, 93, 93);
   color:white;
-  font-size: xx-large;
+  font-size: 100px;
   display:flex;
   justify-content: center;
   align-items: center;
@@ -42,7 +42,7 @@ body {
   position: absolute;
   top:33%;
   left:33%;
-  color:rgb(97, 94, 94);
+  color:rgb(219, 219, 219);
 }
 
 .PlaceHolder {
@@ -86,11 +86,13 @@ button:hover {
   border-bottom: rgb(26, 22, 54) solid 2px;
 }
   .placeNames {
-    margin-left:30px;
+    margin-left:20px;
+    color:white;
   }
 
 .trash {
-  margin-right:30px;
+  margin-right:20px;
+  color:white;
 }
 .cityName {
   position: absolute;

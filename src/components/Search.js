@@ -13,7 +13,7 @@ const Search = ({ cities, setCities, setCurrentCity, currentCity }) => {
     setCurrentCity([newCity]);
     return currentCity;
   };
-console.log(currentCity)
+
   return (
     <form className="Search" onChange={changeHandler} onSubmit={submitHandler}>
       <input type="text" placeholder="Search for your City?" />
