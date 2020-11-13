@@ -34,10 +34,23 @@ body {
 }
 .Weather {
   width:100%;
-  background: linear-gradient(darkBlue, lightBlue);
   height:500px;
   position: relative;
+  background: linear-gradient(rgb(130, 95, 170), rgb(126, 210, 243));
 }
+.WeatherCold {
+  width:100%;
+  height:500px;
+  position: relative;
+  background: linear-gradient(rgb(70, 121, 163), rgb(196, 221, 230));
+}
+.WeatherHot {
+  width:100%;
+  height:500px;
+  position: relative;
+  background: linear-gradient(rgb(238, 128, 3), rgb(250, 237, 124));
+}
+
 .weatherImage {
   position: absolute;
   top:33%;

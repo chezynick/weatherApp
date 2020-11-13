@@ -10,7 +10,7 @@ import PlaceHolder from "./components/PlaceHolder";
 function App() {
   //state variables
   const [cities, setCities] = useState([
-    { name: "birmingham" },
+    { name: "melbourne" },
     { name: "manchester" },
     { name: "hull" },
   ]);
