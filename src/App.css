@@ -1,38 +1,128 @@
+*{
+  margin:0;
+  padding:0;
+
+}
+body {
+  display:flex;
+  justify-content: center;
+  background-color: rgb(34, 34, 34);
+}
 .App {
   text-align: center;
+  width:600px;
+  height:auto;
+  font-family: 'Nunito', sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.Header {
+  width:100%;
+  height:100px;
+  background-color: rgb(95, 93, 93);
+  color:white;
+  font-size: xx-large;
+  display:flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.Search {
+  padding:0;
+  margin:0;
+  display:flex;
+  width:100%;
+  background-color: brown;
+  height:50px;
+}
+.Weather {
+  width:100%;
+  background-color: rgb(164, 168, 168);
+  height:500px;
+  position: relative;
+}
+.weatherImage {
+  position: absolute;
+  top:33%;
+  left:33%;
+
 }
 
-.App-link {
-  color: #61dafb;
+.PlaceHolder {
+  width:100%;
+  height:auto;
 }
+input {
+  width:80%;
+  height:100%;
+  text-align: center;
+  outline:none;
+  border:none;
+  font-size: xx-large;
+  color:rgb(37, 37, 37);
+  font-family: 'Nunito', sans-serif;
+}
+button{
+  display: inline-block;
+  width:20%;
+  height:100%;
+  outline:none;
+  border: none;
+  font-size: large;
+  background-color: rgb(223, 221, 221);
+  color:rgb(34, 34, 34);
+  font-family: 'Nunito', sans-serif;
+}
+button:hover {
+  background-color: rgb(34, 34, 34);
+  color:white;
+}
+.Place {
+  width:100%;
+  background-color: rgb(100, 100, 100);
+  color:white;
+  height:60px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  color:rgb(34, 34, 34)
+}
+  .placeNames {
+    margin-left:30px;
+  }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.trash {
+  margin-right:30px;
+}
+.cityName {
+  position: absolute;
+  float:left;
+  padding:5px 20px 5px 20px;
+  background-color: rgb(34, 34, 34);
+  opacity: 0.5;
+  color:white;
+}
+.temp {
+  position: absolute;
+  bottom: 0;
+  right:0;
+  padding:5px 20px 5px 20px;
+  background-color: rgb(34, 34, 34);
+  opacity: 0.5;
+  color:white;
+}
+.wind {
+  position: absolute;
+  bottom: 0;
+  left:0;
+  padding:5px 20px 5px 20px;
+  background-color: rgb(34, 34, 34);
+  opacity: 0.5;
+  color:white;
+}
+.weatherType {
+  position: absolute;
+  top: 0;
+  right:0;
+  padding:5px 20px 5px 20px;
+  background-color: rgb(34, 34, 34);
+  opacity: 0.5;
+  color:white;
 }

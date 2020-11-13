@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+
+//component import
+import Header from "./components/Header";
+import Search from "./components/Search";
+import Weather from "./components/Weather";
+import PlaceHolder from "./components/PlaceHolder";
 
 function App() {
+  //state variables
+  const [cities, setCities] = useState([
+    { name: "glossop" },
+    { name: "manchester" },
+    { name: "hull" },
+  ]);
+  const [currentCity, setCurrentCity] = useState([{ name: "manchester" }]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Search setCities={setCities} cities={cities} setCurrentCity={setCurrentCity}/>
+      <Weather currentCity={currentCity} />
+      <PlaceHolder cities={cities} setCities={setCities} currentCity={currentCity} setCurrentCity={setCurrentCity} />
     </div>
   );
 }
