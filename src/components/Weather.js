@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCloud, faCloudSun } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCloud,
+  faCloudSun,
+  faCloudRain,
+  faSun,
+  faSnowflake,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Weather = ({ currentCity }) => {
   //weather states
@@ -11,7 +17,6 @@ const Weather = ({ currentCity }) => {
 
   //function to get current weather and to update state of weather
   const cityWeather = async (city) => {
-    
     try {
       const response = await fetch(
         `http://api.openweathermap.org/data/2.5/weather?q=` +
@@ -25,7 +30,8 @@ const Weather = ({ currentCity }) => {
       //change the weather icon depending on weather
       if (currentWeather === "Overcast" || "Cloudy") {
         setWeatherImage(faCloud);
-      } else if (currentWeather === "scattered clouds") {
+      }
+      if (currentWeather === "scattered clouds") {
         setWeatherImage(faCloudSun);
       }
       console.log(weather);

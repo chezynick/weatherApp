@@ -10,7 +10,7 @@ import PlaceHolder from "./components/PlaceHolder";
 function App() {
   //state variables
   const [cities, setCities] = useState([
-    { name: "glossop" },
+    { name: "birmingham" },
     { name: "manchester" },
     { name: "hull" },
   ]);
@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Search setCities={setCities} cities={cities} setCurrentCity={setCurrentCity}/>
+      <Search setCities={setCities} cities={cities} setCurrentCity={setCurrentCity} currentCity={currentCity}/>
       <Weather currentCity={currentCity} />
       <PlaceHolder cities={cities} setCities={setCities} currentCity={currentCity} setCurrentCity={setCurrentCity} />
     </div>
