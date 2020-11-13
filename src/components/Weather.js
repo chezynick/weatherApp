@@ -25,7 +25,7 @@ const Weather = ({ currentCity }) => {
   const cityWeather = async (city) => {
     try {
       const response = await fetch(
-        `http://api.openweathermap.org/data/2.5/weather?q=` +
+        `https://api.openweathermap.org/data/2.5/weather?q=` +
           city +
           `&units=metric&APPID=84634c62ad44fa7c5c527c3f90102a59`
       );
