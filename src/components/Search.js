@@ -6,17 +6,20 @@ const Search = ({ cities, setCities, setCurrentCity, currentCity }) => {
   //event handlers
   const changeHandler = (e) => {
     setNewCity({ name: e.target.value });
+    
   };
   const submitHandler = (e) => {
     e.preventDefault();
     setCities([...cities, newCity]);
     setCurrentCity([newCity]);
+    setNewCity({ name: "" })
+    
     return currentCity;
   };
 
   return (
     <form className="Search" onChange={changeHandler} onSubmit={submitHandler}>
-      <input type="text" placeholder="Search for your City?" />
+      <input type="text" placeholder="Search for your City?" value={newCity.name}/>
       <button type="submit">Submit</button>
     </form>
   );

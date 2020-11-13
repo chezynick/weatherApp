@@ -3,10 +3,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCloud,
   faCloudSun,
-  faCloudRain,
+  
   faSun,
   faSnowflake,
-  faSmog,
+  faCloudRain,
+  
 } from "@fortawesome/free-solid-svg-icons";
 
 const Weather = ({ currentCity }) => {
@@ -17,6 +18,8 @@ const Weather = ({ currentCity }) => {
   const [weatherImage, setWeatherImage] = useState(faSnowflake);
   const [colorBkgrnd, setcolorBkgrnd] = useState("Weather");
   const [clouds,setClouds] = useState(50);
+  const [cloudier, setCloudier] = useState('cloud2')
+  
 
   //function to get current weather and to update state of weather
   const cityWeather = async (city) => {
@@ -43,17 +46,21 @@ const Weather = ({ currentCity }) => {
 
   const images = () => {
     //change the weather icon depending on weather
-    console.log(clouds)
+    
     if (clouds > 70) {
       setWeatherImage(faCloud);
+      setCloudier('cloudVisible')
     }
    else if (clouds > 30 && clouds <70) {
-      setWeatherImage(faCloudSun);
+      setWeatherImage(faCloudSun)
+      setCloudier('cloud2')
     }
     else if (clouds <= 30 ) {
       setWeatherImage(faSun);
+      setCloudier('cloud2')
     } else {
       setWeatherImage(faCloud);
+      setCloudier('cloud2')
     }
   };
 
@@ -76,6 +83,11 @@ const Weather = ({ currentCity }) => {
         className="weatherImage"
         size="10x"
         icon={weatherImage}
+      />
+      <FontAwesomeIcon
+        className={cloudier}
+        size="7x"
+        icon={faCloud}
       />
       <h1 className="temp">{currentTemp}c</h1>
       <h1 className="wind">{currentWind}mph</h1>
