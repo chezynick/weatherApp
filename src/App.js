@@ -18,10 +18,24 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
-      <Search setCities={setCities} cities={cities} setCurrentCity={setCurrentCity} currentCity={currentCity}/>
-      <Weather currentCity={currentCity} />
-      <PlaceHolder cities={cities} setCities={setCities} currentCity={currentCity} setCurrentCity={setCurrentCity} />
+      <div className="left">
+        <Header />
+        <Search
+          setCities={setCities}
+          cities={cities}
+          setCurrentCity={setCurrentCity}
+          currentCity={currentCity}
+        />
+        <Weather currentCity={currentCity} />
+      </div>
+      <div className="right">
+        <PlaceHolder
+          cities={cities}
+          setCities={setCities}
+          currentCity={currentCity}
+          setCurrentCity={setCurrentCity}
+        />
+      </div>
     </div>
   );
 }
